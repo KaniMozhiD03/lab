@@ -9,7 +9,7 @@
 <br>		   				
 {% block content %}	                		
 <form action="{{ url_for("index")}}" method="post">
-<label for="Temperature">Temperature</label>
+<label for="Temperature">Temperature in farenheit</label>
 				<input type="text" id="Temperature" name="Temperature" value="{{Temperature}}" placeholder="Temperature">
 				<button class="submit">Convert</button>
 				{% if error is defined and error %}
@@ -17,6 +17,7 @@
 				{% endif %}			
 			{% endblock %}
 			{% if data is defined and data %}
+				<p>Temperature in Celsius</p>
 				<p>{{ data}}</p>
 				
 
