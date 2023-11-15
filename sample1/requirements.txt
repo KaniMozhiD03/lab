@@ -1,3 +1,3 @@
-flask==2.1.0
+Flask==2.1.0
 requests==2.31.0
-Werkzueg==2.2.2
+Werkzeug==2.2.2
