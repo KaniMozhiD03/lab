@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature conversion</title>
+</head>
+<body>	
+<br><br><br>
+<h2>Temperature conversion</h2>
+<br>		   				
+{% block content %}	                		
+<form action="{{ url_for("index")}}" method="post">
+<label for="Temperature">Temperature</label>
+				<input type="text" id="Temperature" name="Temperature" value="{{Temperature}}" placeholder="Temperature">
+				<button class="submit">Convert</button>
+				{% if error is defined and error %}
+					<br><br><span>Error: Please enter temperature.</span></br>
+				{% endif %}			
+			{% endblock %}
+			{% if data is defined and data %}
+				<p>{{ data}}</p>
+				
+
+			{% endif %}
+</body>
+</html>
