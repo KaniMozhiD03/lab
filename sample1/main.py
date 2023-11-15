@@ -10,7 +10,7 @@ def index():
     Temperature = ''
     if request.method == "POST":       
         Temperature= request.form.get("Temperature")  
-        if temperature:
+        if Temperature:
             Ctemp=Temperature/96
         else:
             error = 1    
