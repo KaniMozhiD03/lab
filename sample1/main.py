@@ -11,7 +11,7 @@ def index():
     if request.method == "POST":       
         Temperature= request.form.get("Temperature")  
         if Temperature:
-            Ctemp=Temperature/96
+            Ctemp=str(int(Temperature)/96)
         else:
             error = 1    
     return render_template('index.html', data = Ctemp, Temperature=Temperature, error = error)
